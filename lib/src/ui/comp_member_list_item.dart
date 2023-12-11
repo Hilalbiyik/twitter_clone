@@ -13,20 +13,21 @@ class _CompMemberListItemState extends State<CompMemberListItem> {
     return ListView(
       children: [
         ListTile(
-          title: Text("data"),
-          subtitle: Text("data"),
-          leading: CircleAvatar(
-            backgroundColor: Colors.amber,
+          leading: Column(
+            children: [
+              Text("Joshua Lawrance",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
+              Text(
+                "D-teams",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text("systems"),
+              Text("277 Members")
+            ],
           ),
+          trailing: CircleAvatar(),
         ),
-        ListTile(
-            leading: Column(
-          children: [Text("data"), Text("data"), Text("data")],
-        )),
-        ListTile(
-          
-          
-            )
       ],
     );
   }

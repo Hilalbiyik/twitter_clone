@@ -25,11 +25,10 @@ class CompNavi extends StatelessWidget {
           icon: Icon(Icons.notifications_none),
           label: '',
         ),
-        
       ],
       currentIndex: currentIndex,
       onTap: onTap,
-       selectedItemColor: Colors.blue,
+      selectedItemColor: Colors.blue,
     );
   }
 }

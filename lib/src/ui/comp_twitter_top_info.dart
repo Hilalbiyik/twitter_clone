@@ -3,13 +3,12 @@ import 'package:twitter_clone/src/constants.dart';
 import 'package:twitter_clone/src/tweet_model.dart';
 
 class TweetTopInfo extends StatelessWidget {
-   const TweetTopInfo({
+  const TweetTopInfo({
     super.key,
     required this.tweetInfo,
   });
 
   final String tweetInfo;
-
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +17,7 @@ class TweetTopInfo extends StatelessWidget {
         SizedBox(
           width: 55.0,
           child: Align(
-            alignment: Alignment.centerRight,
-            child: Icon(Icons.heart_broken)) ,
+              alignment: Alignment.centerRight, child: Icon(Icons.favorite)),
         ),
         const SizedBox(
           width: 7.0,

@@ -4,8 +4,10 @@ import 'package:twitter_clone/src/constants.dart';
 import 'package:twitter_clone/src/tweet_model.dart';
 import 'package:twitter_clone/src/ui/comp_twitter_top_info.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:twitter_clone/src/ui/twitter_list.dart';
 import 'package:twitter_clone/src/ui/twitter_trend.dart';
 import 'comp_bottom_nav_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TwitterHomePage extends StatefulWidget {
   TwitterHomePage({super.key});
@@ -67,8 +69,10 @@ class _TwitterHomePageState extends State<TwitterHomePage> {
         );
       case 1:
         return TwitterTrendsPage();
+      case 2:
+        return twitterList();
       default:
-        return Container(); 
+        return Container();
     }
   }
 
@@ -80,7 +84,8 @@ class _TwitterHomePageState extends State<TwitterHomePage> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(
+            horizontal: kDefaultPadding, vertical: 10.0),
         child: Column(
           children: [
             TweetTopInfo(tweetInfo: tweet.tweetInfoText),
@@ -106,7 +111,7 @@ class _TwitterHomePageState extends State<TwitterHomePage> {
                             ),
                           ),
                           Text(
-                            '@${tweet.tag}',
+                            ' @${tweet.tag}',
                             style: kTweetInfoStyle,
                           ),
                           const SizedBox(width: 2.0),
@@ -125,7 +130,7 @@ class _TwitterHomePageState extends State<TwitterHomePage> {
                             style: kTweetStyle,
                           ),
                           TextSpan(
-                            text: '#${tweet.hasTag}',
+                            text: '${tweet.hasTag}',
                             style: kTweetStyle.copyWith(color: kPrimaryColor),
                           ),
                         ],
@@ -134,8 +139,10 @@ class _TwitterHomePageState extends State<TwitterHomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          indroductionCounter('comment', tweet.coments.toString()),
-                          indroductionCounter('retweet', tweet.retweets.toString()),
+                          indroductionCounter(
+                              'comment', tweet.coments.toString()),
+                          indroductionCounter(
+                              'retweet', tweet.retweets.toString()),
                           indroductionCounter('heart', tweet.likes.toString()),
                           indroductionCounter('share', ''),
                         ],

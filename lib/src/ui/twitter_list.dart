@@ -3,6 +3,7 @@ import 'package:twitter_clone/src/ui/comp_bottom_nav_bar.dart';
 import 'package:twitter_clone/src/ui/comp_member_list_item.dart';
 import 'package:twitter_clone/src/ui/sucribed.dart';
 
+
 class twitterList extends StatefulWidget {
   const twitterList({super.key});
 
@@ -17,7 +18,7 @@ class _twitterListState extends State<twitterList> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 2,
+        length: 24,
         child: Scaffold(
           appBar: AppBar(
             leading: Icon(Icons.chevron_left),
@@ -35,7 +36,6 @@ class _twitterListState extends State<twitterList> {
                 ),
               ],
             ),
-            // title: const Text('Tabs De'),
           ),
           body: const TabBarView(
             children: [
@@ -43,14 +43,14 @@ class _twitterListState extends State<twitterList> {
               CompMemberListItem(),
             ],
           ),
-          bottomNavigationBar: CompNavi(
-            currentIndex: _currentIndex,
-            onTap: (index) {
-              setState(() {
-                _currentIndex = index;
-              });
-            },
-          ),
+          // bottomNavigationBar: CompNavi(
+          //   currentIndex: _currentIndex,
+          //   onTap: (index) {
+          //     setState(() {
+          //       _currentIndex = index;
+          //     });
+          //   },
+          // ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Icon(
