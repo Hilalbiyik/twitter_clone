@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/src/ui/deneme.dart';
+import 'package:twitter_clone/src/ui/twitter_home.dart';
 import 'package:twitter_clone/src/ui/twitter_list.dart';
 
 void main() {
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: twitterList());
+        home:TwitterHomePage());
   }
 }

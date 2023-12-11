@@ -15,19 +15,21 @@ class CompNavi extends StatelessWidget {
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: 'Ana Sayfa',
+          label: '',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.search),
-          label: 'Ara',
+          label: '',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.notifications_none),
-          label: 'Bildirimler',
+          label: '',
         ),
+        
       ],
       currentIndex: currentIndex,
       onTap: onTap,
+       selectedItemColor: Colors.blue,
     );
   }
 }
