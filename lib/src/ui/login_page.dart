@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/src/ui/components/comp_buttons.dart';
 import 'package:twitter_clone/src/ui/components/comp_text_field.dart';
+import 'package:twitter_clone/src/ui/sign_up.dart';
+import 'package:twitter_clone/src/ui/twitter_home.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -28,7 +30,8 @@ class _LoginPageState extends State<LoginPage> {
                 width: 70,
               ),
               SizedBox(height: 30),
-              Text("Log in to Twitter", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 37)),
+              Text("Log in to Twitter",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 37)),
               SizedBox(height: 30),
               CompTextField(
                 controller: widget.userNameController,
@@ -41,14 +44,33 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
               ),
               SizedBox(height: 10),
-              CustomButton(text: "Log In", onPressed: () {}),
+              CustomButton(
+                  text: "Log In",
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TwitterHomePage()),
+                    );
+                  }),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Forgot Password?", style: TextStyle(color: Colors.blue)),
-                    Text("Sign up to Twitter", style: TextStyle(color: Colors.blue)),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUpPage()));
+                        },
+                        child: Text("Sign up to Twitter",
+                            style: TextStyle(color: Colors.blue))),
+                    Text("Forgot Password?",
+                        style: TextStyle(color: Colors.blue)),
+                    // Text("Sign up to Twitter",
+                    //     style: TextStyle(color: Colors.blue)),
                   ],
                 ),
               ),

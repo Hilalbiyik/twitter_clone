@@ -41,26 +41,18 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   build_runner: ^2.4.7
   flutter_gen: ^5.3.2
   flutter_gen_runner: ^5.3.2
   font_awesome_flutter: ^10.6.0
+  json_serializable: ^6.7.1
+  json_annotation: ^4.8.1
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+ 
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
@@ -93,3 +85,24 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Thin.otf
+          weight: 100
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Ultralight.otf
+          weight: 200
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Light.otf
+          weight: 300
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Regular.otf
+          weight: 400
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Bold.otf
+          weight: 700
+        # - asset: assets/fonts/sf-pro/SF-Pro-Text-Light.otf
+        #   weight: 800
+        - asset: assets/fonts/sf-pro/SF-Pro-Text-Heavy.otf
+          weight: 900
