@@ -7,7 +7,9 @@ import 'package:twitter_clone/src/ui/twitter_home.dart';
 class SignUpPage extends StatefulWidget {
   SignUpPage({super.key});
   final userNameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final passwordcomfirmController = TextEditingController();
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -38,9 +40,19 @@ class _SignUpPageState extends State<SignUpPage> {
                 obscureText: false,
               ),
               CompTextField(
-                controller: widget.userNameController,
+                controller: widget.emailController,
                 hintText: 'Phone Number & E-mail',
                 obscureText: false,
+              ),
+               CompTextField(
+                controller: widget.passwordController,
+                hintText: 'Password',
+                obscureText: true,
+              ),
+               CompTextField(
+                controller: widget.passwordcomfirmController,
+                hintText: 'Password Confirm',
+                obscureText: true,
               ),
               SizedBox(height: 10),
               CustomButton(
@@ -57,7 +69,6 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    DropdownButtonExample(),
                     TextButton(
                         onPressed: () {
                           Navigator.push(
@@ -65,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               MaterialPageRoute(
                                   builder: (context) => SignUpPage()));
                         },
-                        child: Text("Sign up to fdsfTwitter",
+                        child: Text("Sign Up",
                             style: TextStyle(color: Colors.blue))),
                     Text("Forgot Password?",
                         style: TextStyle(color: Colors.blue)),
